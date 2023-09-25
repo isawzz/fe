@@ -4,9 +4,9 @@
 1. added NotoColorEmoji.ttf font to fonts
 
 2. reverted to ladder emoji in content/research/cladder.md
-2. reverted to folder emoji in content/code/omnifig.md
+3. reverted to folder emoji in content/code/omnifig.md
 
-3. added @font-face in styles.css (ganz oben) and updated .project-page-emoji
+4. added @font-face in styles.css (ganz oben) and updated .project-page-emoji
 
 <pre>
 .project-page-emoji {
@@ -17,10 +17,10 @@
 }
 </pre>
 
-4. in script.js addProjectToGallery added class to the emoji span: 
+5. in script.js addProjectToGallery added class to the emoji span: 
 
 <pre>
 const emoji = info.emoji ? `<span class='project-page-emoji'>${info.emoji}</span>` : '';
 </pre>
 
-5. in home.md, changed src="/assets... into src="assets/... (relative url)
+6. in home.md, changed src="/assets... into src="assets/... (relative url)
