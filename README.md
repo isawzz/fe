@@ -4,6 +4,7 @@
 1. added NotoColorEmoji.ttf font to fonts
 
 2. reverted to ladder emoji in content/research/cladder.md
+2. reverted to folder emoji in content/code/omnifig.md
 
 3. added @font-face in styles.css (ganz oben) and updated .project-page-emoji
 

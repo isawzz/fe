@@ -4,7 +4,7 @@ date: 2023-01-17
 repo: felixludos/omni-fig
 cover: https://images.unsplash.com/photo-1534777410147-084a460870fc?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=1440
 # emoji: 📑
-emoji: 🪵
+# emoji: 🪵
 description: Unleashing project configuration and organization
 ---
 
