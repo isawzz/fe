@@ -18,4 +18,7 @@
 
 4. in script.js addProjectToGallery added class to the emoji span: 
 
-    const emoji = info.emoji ? `<span class='project-page-emoji'>${info.emoji}</span>` : '';
+<pre>
+const emoji = info.emoji ? `<span class='project-page-emoji'>${info.emoji}</span>` : '';
+</pre>
+
