@@ -22,3 +22,4 @@
 const emoji = info.emoji ? `<span class='project-page-emoji'>${info.emoji}</span>` : '';
 </pre>
 
+5. (also changed occurrences of <img src='assets...> to <img src='./assets... ie.,relative urls) 
