@@ -7,12 +7,14 @@
 
 3. added @font-face in styles.css (ganz oben) and updated .project-page-emoji
 
+<pre>
 .project-page-emoji {
     display: flex;
     font-size: 1.8em;
     font-family: 'Noto Color Emoji', sans-serif;
     margin-right: 10px;
 }
+</pre>
 
 4. in script.js addProjectToGallery added class to the emoji span: 
 
