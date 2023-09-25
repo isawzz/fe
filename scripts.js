@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }
 
-    fetch('content/_toc.txt')
+    fetch('content/_toc.yaml')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -333,8 +333,8 @@ function addProjectToGallery(gallery, entry, content) {
     // const arxiv = `assets/arxiv.svg`;
 
     const coverImage = info.cover ? `<div class="card-cover" style="background-image: url('${info.cover}');"></div>` : '';
+    // const emoji = info.emoji ? `<span>${info.emoji}</span>` : '';
     const emoji = info.emoji ? `<span class='project-page-emoji'>${info.emoji}</span>` : '';
-
     const description = info.description ? `<p class="card-description">${info.description}</p>` : '';
     // const date = info.date ? `<span class="card-date">${info.date}</span>` : '';
 
