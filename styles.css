@@ -1,0 +1,506 @@
+@font-face {
+    font-family: 'Noto Color Emoji';
+    src: url('./fonts/NotoColorEmoji.ttf') format('truetype');
+}
+html {
+    scroll-behavior: smooth;
+    background-color: var(--side-bar-color);
+}
+
+header {
+    justify-content: space-between;
+    background-color: var(--background-color);
+}
+header img {
+    max-width: 100%;
+}
+
+nav {
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    /* margin: 0; */
+    /* margin: 0 50px; */
+    display: flex;
+    /* padding: 10px; */
+}
+nav a {
+    font-family: 'Intel One Mono', monospace;
+    font-size: 18px;
+    font-weight: 500;
+    flex: 1;
+    text-align: center;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+    text-decoration: none;
+    padding: 2px;
+}
+nav a:hover {
+    color: var(--link-color);
+}
+
+body {
+    border-left: 3px solid var(--border-color);
+    border-right: 3px solid var(--border-color);
+    background-color: var(--background-color);
+    font-family: 'Open Sans', sans-serif;
+    width: 720px;
+    margin: 0 auto;
+    min-height: 100vh;
+    margin-bottom: 49px;
+    color: var(--text-color);
+    transition: transform 0.3s ease;
+}
+
+main {
+    padding: 20px;
+    flex: 1 0 auto;
+}
+
+footer {
+    border-top: 1px solid var(--border-color);
+    border-left: 3px solid var(--border-color);
+    border-right: 3px solid var(--border-color);
+    background: var(--footer-bg-color);
+    text-align: center;
+    z-index: 1000;
+    height: 50px;
+    line-height: 50px;
+    font-family: 'Intel One Mono', monospace;
+    position: fixed;
+    bottom: 0;
+    margin: auto;
+    margin-left: -3px;
+    width: 726px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+@media (max-width: 725px) {
+    body {
+        width: 100%;
+        padding: 20px 0px;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    will-change: opacity, transform;
+    visibility: hidden;
+}
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.button {
+    transition: transform 0.3s ease;
+}
+.button:hover {
+    transform: scale(1.05); /* Slightly enlarges the button */
+}
+
+.project-card {
+    border: 1px solid var(--card-border-color);
+    transition: box-shadow 0.3s;
+    position: relative;
+    background-color: var(--card-bg-color);
+    padding: 10px;
+}
+
+.project-card:hover {
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    box-shadow: inset 0 0 10px #000000;
+}
+.project-card h3 {
+    margin-top: 0;
+}
+.project-card .description {
+    height: 100px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit; /* Preserves the color of the text inside the card */
+    display: block; /* Makes the anchor tag block-level to fill the card's size */
+}
+
+.project-card {
+    display: flex;
+    overflow: hidden;
+}
+
+.card-content {
+    flex: 2; /* Takes up 2 parts of the card, meaning two-thirds */
+    padding: 10px; /* Optional: Some space inside the content area */
+}
+
+.project-cover {
+    flex: 1; 
+    background-size: cover;   /* Ensures the background image covers the full size of its container */
+    background-position: center;  /* Centers the background image */
+    background-repeat: no-repeat;  /* Ensures the image doesn't repeat */
+    height: 100%;  /* Full height of the card */
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Intel One Mono', monospace;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+@font-face {
+    font-family: 'IntelOneMono';
+    src: url('fonts/IntelOneMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IntelOneMono';
+    src: url('fonts/IntelOneMono-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IntelOneMono';
+    src: url('fonts/IntelOneMono-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'IntelOneMono';
+    src: url('fonts/IntelOneMono-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'IntelOneMono';
+    src: url('fonts/IntelOneMono-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IntelOneMono';
+    src: url('fonts/IntelOneMono-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'IntelOneMono';
+    src: url('fonts/IntelOneMono-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IntelOneMono';
+    src: url('fonts/IntelOneMono-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.profile-image {
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid #e0e0e0; */
+    border: 1px solid var(--card-border-color);
+    background-color: var(--card-bg-color);
+    padding: 10px;
+    /* width: 300px; */
+    /* height: 120px; */
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.card:hover {
+    background-color: var(--card-bg-color-hover);
+    box-shadow: inset 0 2px 5px #444;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+.card-header {
+    display: flex;
+    align-items: center;
+}
+.card-header span {
+    margin-right: 10px; /* spacing between emoji and title */
+    font-size: 1.5em;
+}
+.card-title {
+    font-weight: bold;
+    margin: 0;
+}
+.card-description {
+    margin-top: 10px;
+}
+.card-date {
+    /* margin-top: 10px; */
+    color: var(--text-faint-color);
+    font-size: 0.8em;
+    /* align-content: right; */
+    position: absolute;
+    /* bottom: 10px; */
+    right: 10px;
+    /* margin-right: 10px; */
+}
+
+.card-cover {
+    width: 33%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    /* width: 66.67%; */
+}
+
+.card-icon {
+    text-decoration: none;
+    color: var(--icon-color); /* or any color you'd like */
+    font-size: 1.2em; /* adjust icon size */
+    margin: 0 20px; /* spacing between icons */
+}
+
+.card-icon:hover {
+    color: #007BFF;
+}
+
+.card-icon:not(:last-child) {
+    margin-right: 0px;
+}
+
+.share-link {
+    margin-left: 10px; /* Space between the title and icon */
+    transition: opacity 0.3s; /* Smooth transition for hover effect */
+}
+.share-link:hover {
+    opacity: 0.7; /* Slight fade effect on hover */
+}
+
+.notification {
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.notification.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#project-header {
+    background-image: url('assets/ideal_city.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 240px;
+    max-width: 100%;
+}
+
+.project-page-title {
+    display: flex;
+    align-items: center;
+}
+.project-page-title-text {
+    display: flex;
+  /* display: inline-block; */
+  margin: 0;
+}
+.project-page-emoji {
+    display: flex;
+    font-size: 1.8em;
+    font-family: 'Noto Color Emoji', sans-serif;
+    margin-right: 10px;
+}
+.project-page-date {
+    color: var(--text-faint-color);
+    font-size: 0.8em;
+    text-align: right;
+    display: block;
+}
+.project-page-date span {
+    display: block;
+}
+.project-page-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-page-icon {
+    text-decoration: none;
+    color: var(--icon-color);
+    font-size: 1.2em;
+    margin: 0 20px;
+}
+.project-page-icon:hover {
+    color: #007BFF;
+}
+.project-page-icon:not(:last-child) {
+    margin-right: 0px;
+}
+
+body, a, div, button {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.floating-toggle {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    background-color: var(--mode-toggle-bg-color, #ccc);
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    transition: background-color 0.3s ease;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2); */
+}
+
+.floating-toggle:hover {
+    background-color: var(--mode-toggle-hover-color, #bbb);
+}
+
+/* Hide the sun icon by default */
+#sunIcon {
+    display: none;
+}
+
+#moonIcon, #sunIcon {
+    font-size: 16px; /* You can set the size to your preference */
+}
+
+/* When dark mode is active, switch icons */
+[data-theme="dark"] #moonIcon {
+    display: none;
+}
+[data-theme="dark"] #sunIcon {
+    display: inline;
+}
+  
+
+
+:root {
+    --max: #ffffff;
+    --min: #000000;
+    --side-bar-color: #f0f4ff;
+    --background-color: #eee;
+    --footer-bg-color: #ccc;
+    --card-bg-color: #e5e5e5;
+    --card-bg-color-hover: #ccc;
+    --card-border-color: #e0e0e0;
+    --border-color: #222;
+    --text-color: #333;
+    --text-faint-color: #666;
+    --link-color: #0077cc;
+    --icon-color: #333;
+    --mode-toggle-bg-color: #bbb;
+    --mode-toggle-hover-color: #aaa;
+}
+
+/* Dark mode colors */
+[data-theme='dark'] {
+    --max: #000000;
+    --min: #ffffff;
+    --side-bar-color: #222;
+    --background-color: #333;
+    --footer-bg-color: #444;
+    --card-bg-color: #3e3e3e;
+    --card-bg-color-hover: #585858;
+    --card-border-color: #666;
+    --border-color: #999;
+    --text-color: #ddd;
+    --text-faint-color: #aaa;
+    --link-color: #6dc2ff;
+    --icon-color: #ddd;
+    --mode-toggle-bg-color: #ccc;
+    --mode-toggle-hover-color: #aaa;
+}
+
+#markdown-container {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+/* #markdown-container h1,
+    #markdown-container h2,
+    #markdown-container h3 {
+    color: #333;
+} */
+
+#markdown-container img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#markdown-container figcaption {
+    text-align: center;
+    font-size: 0.8em;
+    color: var(--text-faint-color);
+}
+
+.project-format-article p, .project-format-article li, .project-format-article blockquote {
+    font-family: 'Computer Modern', serif;
+}
+
+.contact-email {
+    padding: 10px;
+}
+

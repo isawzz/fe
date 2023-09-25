@@ -1,0 +1,10 @@
+_site
+.bundle
+.DS_Store
+.jekyll-cache
+.jekyll-metadata
+.sass-cache
+Gemfile.lock
+.idea/
+extra/
+assets/content/md_sim.mp4
