@@ -1,6 +1,19 @@
 
-# Personal Website
+# changes
 
-This is the code and content for my personal website, featuring my past and current research, essays, and other projects.
+1. added NotoColorEmoji.ttf font to fonts
 
-Check it out at [felixludos.com](https://felixludos.com)!
+2. reverted to ladder emoji in content/research/cladder.md
+
+3. added @font-face in styles.css (ganz oben) and updated .project-page-emoji
+
+.project-page-emoji {
+    display: flex;
+    font-size: 1.8em;
+    font-family: 'Noto Color Emoji', sans-serif;
+    margin-right: 10px;
+}
+
+4. in script.js addProjectToGallery added class to the emoji span: 
+
+    const emoji = info.emoji ? `<span class='project-page-emoji'>${info.emoji}</span>` : '';
