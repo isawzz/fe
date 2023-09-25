@@ -22,4 +22,4 @@
 const emoji = info.emoji ? `<span class='project-page-emoji'>${info.emoji}</span>` : '';
 </pre>
 
-
+5. in home.md, changed src="/assets... into src="assets/... (relative url)
