@@ -23,3 +23,5 @@ const emoji = info.emoji ? `<span class='project-page-emoji'>${info.emoji}</span
 </pre>
 
 5. (also changed occurrences of <img src='assets...> to <img src='./assets... ie.,relative urls) 
+
+6. (also wegen dem doofen telecave (php erlaubt kein fetch von yaml files) musste ich toc.txt anstatt toc.yaml laden)

@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }
 
-    fetch('content/_toc.yaml')
+    fetch('content/_toc.txt')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
